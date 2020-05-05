@@ -1,0 +1,26 @@
+{% extends 'shop/basic.html'%}
+{% block title%} Contact Us - Healthy Food{% endblock %}
+{% block body%}
+<div class="container my-3">
+    <h3>Contact Us </h3>
+    <form action="/shop/contact/" method="post">{% csrf_token%}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name"  name='name' placeholder="Enter your name ">
+     </div>
+  <div class="form-group">
+    <label for="name">Email Id</label>
+    <input type="email" class="form-control" id="Email_id" name='email' placeholder="Enter your email id ">
+     </div>
+  <div class="form-group">
+    <label for="name">Mobile number</label>
+    <input type="tel" class="form-control" id="Mobile" name='phone'  placeholder="Enter your Mobile Number ">
+     </div>
+        <div class="form-group">
+    <label for="name">Message</label>
+    <input type="text" class="form-control" id="Query" name='desc' placeholder="Tell us how can we help you to make our product better. ">
+     </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
